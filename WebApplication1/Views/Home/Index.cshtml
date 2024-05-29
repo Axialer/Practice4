@@ -1,0 +1,54 @@
+﻿@{
+    ViewData["Title"] = "Home page";
+}
+
+<style>
+    .text-center {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .text-center h1 {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .text-center button {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+    }
+
+    .text-center button a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .text-center button:hover {
+        background-color: #0056b3;
+    }
+
+    .text-center button a:hover {
+        color: white;
+    }
+
+
+</style>
+
+<div class="text-center">
+    <h1 class="">Welcome!</h1>
+    <button class="">
+        <a asp-controller="LoginController" asp-action="Login" href="@Url.Action("Login", "Login")">Login</a>
+    </button>
+    <button class="">
+        <a asp-controller="RegisterController" asp-action="Register" href="@Url.Action("Register", "Register")">Register</a>
+    </button>
+</div>

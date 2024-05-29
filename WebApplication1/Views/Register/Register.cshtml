@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+
+<style>
+    .text-center {
+        text-align: center;
+        margin-top: 50px;
+    }
+
+    .form-group {
+        display: inline-block;
+        text-align: left;
+        width: 300px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    .form-group button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        border: none;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+        margin-top: 10px;
+    }
+
+    .form-group button:hover {
+        background-color: #0056b3;
+    }
+
+    .form-group a.home-button {
+        display: block;
+        text-align: center;
+        padding: 10px;
+        background-color: #6c757d;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-top: 10px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .form-group a.home-button:hover {
+        background-color: #5a6268;
+    }
+</style>
+
+<div class="text-center">
+    <h1 class="">Register</h1>
+    <form method="post" asp-action="Register" asp-controller="Register">
+        <div class="form-group">
+            <label class="control-label">Login:</label>
+            <input asp-for="Login" class="form-control" name="Login" />
+            <label class="control-label">FullName:</label>
+            <input asp-for="FullName" class="form-control" name="FullName" />
+            <label class="control-label">Password:</label>
+            <input asp-for="Password" class="form-control" type="password" name="Password" />
+            @ViewData["Message"]
+            <button type="submit">Register</button>
+            <a class="home-button" href="@Url.Action("Index", "Home")">Main page</a>
+        </div>
+    </form>
+</div>
